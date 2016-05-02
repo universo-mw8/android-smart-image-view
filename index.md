@@ -14,6 +14,8 @@ Overview
 which additionally allows images to be loaded from URLs or the user's contact
 address book. Images are cached to memory and to disk for super fast loading.
 
+*If you are also looking for a great [android crash reporting](https://bugsnag.com/platforms/android) service, I'd also recommend checking out my company, [Bugsnag](https://bugsnag.com).*
+
 
 Features
 --------
