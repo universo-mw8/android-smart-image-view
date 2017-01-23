@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import java.net.URLConnection;
+
 public class SmartImageView extends ImageView {
     private static final int LOADING_THREADS = 4;
     private static ExecutorService threadPool = Executors.newFixedThreadPool(LOADING_THREADS);
@@ -31,6 +33,10 @@ public class SmartImageView extends ImageView {
     // Helpers to set image by URL
     public void setImageUrl(String url) {
         setImage(new WebImage(url));
+    }
+
+    public void setImageUrl(URLConnection urlConnection, final Integer fallbackResource) {
+        this.setImage(new WebImage(urlConnection), (Integer)fallbackResource);
     }
 
     public void setImageUrl(String url, SmartImageTask.OnCompleteListener completeListener) {
